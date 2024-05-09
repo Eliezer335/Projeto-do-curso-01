@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 15%;
+    
+
+}
+
+.cadastro {
+    width: 380px;
+    height: 250px;
+    background-color: #d3d3d3;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    
+
+}
+
+.estilo {
+    margin-top: 50px;
+}
+
+input {
+    width: 90%;
+    height: 18px;
+    margin-left: 15px;
+    border: none;
+    color: #717070;
+}
+
+button {
+    width: 91%;
+    height: 60px;
+    margin-left: 15px;
+    border: none;
+    background-color: #949191;
+}

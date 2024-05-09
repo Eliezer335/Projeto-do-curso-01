@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    background-color: rgb(190,190,190);
+
+}
+
+
+.pai {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.filho {
+    width: 15px;
+    height: 15px;
+    /* background-color: blue; */
+    margin: 0 5px 0 5px;
+
+}
+
+.contatosE {
+    width: 98.5%;
+    height: 80px;
+    background-color: white;
+    margin: 25px 10px 10px 10px;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cadastroE {
+    width: 15px;
+    height: 15px;
+    background-color: blue;
+    margin-left: 10px;
+
+}
+
+.contatosD {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.cadastroD {
+    width: 15px;
+    height: 15px;
+    margin: 0 10px 0 10px;
+    /* background-color: blue; */
+    
+}
