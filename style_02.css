@@ -37,3 +37,18 @@ button {
     border: none;
     background-color: #949191;
 }
+
+
+.botoes {
+    width: 95%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+        
+
+}
+
+.botaoAdicional {
+    height: 30px ;
+}
+
