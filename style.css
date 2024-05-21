@@ -1,9 +1,29 @@
 body {
     margin: 0;
-    background-color: rgb(190,190,190);
+    background-color: rgb(190, 190, 190);
+    position: relative;
+    height: 100vh;
 
 }
 
+.pagina_contatos {
+    width: 100%;
+    height: 100vh;
+}
+
+.pagina_cadastro {
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    /* margin-top: 15%; */
+    background-color: rgba(58, 55, 55, 0.6)
+
+}
 
 .pai {
     width: 100%;
@@ -26,38 +46,96 @@ body {
 
 }
 
-.contatosE {
+.contatos {
     width: 98.5%;
-    height: 80px;
+    height: 100vh;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contato {
+    width: 98.5%;
+    height: 115px;
     background-color: white;
     margin: 25px 10px 10px 10px;
     border-radius: 5px;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
-.cadastroE {
-    width: 15px;
-    height: 15px;
-    background-color: blue;
+.dados_cadastrados {
+    width: 50%;
+    height: auto;
+    color: #000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 0.5;
     margin-left: 10px;
 
 }
 
-.contatosD {
+.botoes {
     display: flex;
     flex-direction: row;
     align-items: center;
-    
+    margin-right: 10px;
+
 }
 
-.cadastroD {
-    width: 15px;
-    height: 15px;
-    margin: 0 10px 0 10px;
+.icone {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
     /* background-color: blue; */
-    
+
+}
+
+.cadastro {
+    width: 380px;
+    height: 250px;
+    /* background-color: #d3d3d3; */
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.estilo {
+    margin-top: 50px;
+}
+
+input {
+    width: 90%;
+    height: 18px;
+    margin-left: 15px;
+    border: none;
+    color: #717070;
+}
+
+button {
+    width: 91%;
+    height: 60px;
+    margin-left: 15px;
+    border: none;
+    background-color: #949191;
+}
+
+
+.botoes_cadastro {
+    width: 95%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.botao_de_cadastro {
+    height: 30px;
 }
