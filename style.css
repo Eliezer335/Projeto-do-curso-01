@@ -11,7 +11,7 @@ body {
     height: 100vh;
 }
 
-.pagina_cadastro {
+.pagina_cadastro, .pagina_de_edicao {
     right: 0;
     left: 0;
     top: 0;
