@@ -31,7 +31,7 @@
         <section class="contatos" id="contatos_011">
             <div class="contato" id="0">
                 <div class="dados_cadastrados">
-                    <p id="txt01">Eliezer</p>
+                    <p id="txt01">Nome: Eliezer</p>
                     <p id="txt02">email: eliezerdasilva@hotmail.com</p>
                     <p id="txt03">tel.:48999105522</p>
                          
@@ -64,8 +64,9 @@
     
     <main class="pagina_cadastro">
         <div class="cadastro">
-            <input type="text" id="nome" value="Name"><br><br>
-            <input type="text" id="email" value="email"><br><br>
+            <input type="text" id="nome" placeholder="Name" ><br><br>
+            <input type="text" id="email" placeholder="email"><br><br>
+            <input type="text" id="tel" placeholder="tel"><br><br>
             <button id="botao" onclick="adicionaContatos()">ADD CONTACT</button>
             <div class="botoes_cadastro">
                 <button class="botao_de_cadastro" id="botaoVoltar" onclick="fecharAba('.pagina_cadastro')">Return</button>
@@ -78,6 +79,7 @@
         <div class="cadastro">
             <input type="text" id="nomeDeEdicao"><br><br>
             <input type="text" id="emailDeEdicao"><br><br>
+            <input type="text" id="telDeEdicao"><br><br>
             <button id="botao" onclick="EditarContato()">EDIT CONTACT</button>
             <div class="botoes_cadastro">
                 <button class="botao_de_cadastro" id="botaoVoltar" onclick="fecharAba('.pagina_de_edicao')">Return</button>
