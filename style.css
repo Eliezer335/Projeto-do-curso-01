@@ -31,7 +31,7 @@ body {
     border-bottom: 1px solid black;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between;  */
     align-items: center;
 
 
@@ -88,6 +88,22 @@ body {
     width: 25px;
     height: 25px;
     margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+}
+.pesquisa {
+    width: 500px;
+    height: 4vh;
+    color: #000;
+    background-color: rgb(190, 190, 190);
+    display: flex;
+    margin-bottom: 12px;
+    border-radius: 5px;
+}
+
+.icone_ADD_contato {
+    display: flex;
+    margin-left: 650px;
 }
 
 .cadastro {
