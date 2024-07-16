@@ -4,6 +4,27 @@ let txt01_edicao = "";
 let txt02_edicao = "";
 let txt03_edicao = "";
 
+// let lista_de_nomes = "";
+
+let contatosObj= [
+    {
+        id: 0, 
+        nome: "Eliezer",
+        email: "eliezerdasilva@hotmail.com",
+        tel: "48999105522"
+
+    },
+    {
+        id: 1, 
+        nome: "Caio",
+        email: "caiodasilva@hotmail.com",
+        tel: "48999199532"
+        
+    }
+];
+
+
+
 function abrirAba(nome,id,txt01,txt02,txt03){
     const elementoParaAbertura =  document.querySelector(nome)
     elementoParaAbertura.style.display="flex";
@@ -11,8 +32,6 @@ function abrirAba(nome,id,txt01,txt02,txt03){
     const txt1 = document.getElementById(txt01 || "txt01")?.textContent  
     const txt2 = document.getElementById(txt02 || "txt02")?.textContent   // text content pega o texto de dentro da tag HTML de texto, 
     const txt3 = document.getElementById(txt03 || "txt03")?.textContent  //  EX: <p> Rendimento </p> pega palavra rendimento 
-
-    console.log(txt1,txt2,txt3)
 
     const elementoInputNome = document.getElementById("nomeDeEdicao")
     const elementoInputEmail = document.getElementById("emailDeEdicao")
@@ -26,7 +45,6 @@ function abrirAba(nome,id,txt01,txt02,txt03){
     txt01_edicao = txt01
     txt02_edicao = txt02
     txt03_edicao = txt03
-   
 }
 
 function fecharAba(nome){
@@ -52,13 +70,23 @@ function adicionarContatos() {
     const contatos = document.getElementById("contatos_011");
     let ultimoId = parseInt(contatos.lastElementChild?.id) || 0
     const somaId = ultimoId + 1;
-    console.log(`"txt${somaId}1"`)
+
+    const novoContato = {
+        id: somaId,
+        nome: document.getElementById("nome").value,
+        email: document.getElementById("email").value,
+        tel: document.getElementById("tel").value
+    }
+    contatosObj.push(novoContato);
+    const objetoString = JSON.stringify(contatosObj)
+    localStorage.setItem("contatosObj",objetoString)
+
         contatos.innerHTML += `
         <div class="contato" id="${somaId}">
         <div class="dados_cadastrados">
-            <p id="txt${somaId}1">${nameValue}</p>
-            <p id="txt${somaId}2">email:${emailValue}</p>
-            <p id="txt${somaId}3">tel.:${telValue}</p>
+            <p id="txt${somaId}1">nome: ${nameValue}</p>
+            <p id="txt${somaId}2">email: ${emailValue}</p>
+            <p id="txt${somaId}3">tel.: ${telValue}</p>
                  
         </div>
         <div class="botoes">
@@ -81,6 +109,7 @@ function adicionarContatos() {
         </div>
         
         `;
+        
 }    
 
 function EditarContato(){
@@ -118,6 +147,32 @@ function EditarContato(){
         </div>
           
         `;
-  
+}
+
+function pesquisarContatos() {
+    let input = document.getElementById('pesquisa').value
+    const dados_cadastrados = document.querySelectorAll(".contato");
+
+    for(const dados of dados_cadastrados){
+        const nome = dados.querySelector("p")?.textContent
+        console.log(nome)    
+
+            if(nome.includes(input)){
+                dados.style.display='flex';
+            }else{
+                dados.style.display='none';
+            }
+    }
 
 }
+
+pesquisarContatos();
+
+
+
+
+
+
+
+
+
