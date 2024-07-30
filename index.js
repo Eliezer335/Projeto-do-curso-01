@@ -53,8 +53,21 @@ function fecharAba(nome){
 }
 
 function excluirContato(id) {
+    
+    const contatosRegistrados = JSON.parse(localStorage.getItem("contatosObj"))
+    console.log("registrados",contatosRegistrados)
+    const contatosAtualizados = contatosRegistrados.filter((contato) => {
+        return(id != contato.id)
+            
+    })
+    console.log(typeof id,typeof contatosRegistrados[0].id)  
+
+    const objetoString = JSON.stringify(contatosAtualizados)
+    localStorage.setItem("contatosObj",objetoString)
+
     const elementoHTML = document.getElementById(id);
     elementoHTML.remove()
+    
 
     //excluir o elemento tambem do localstorage 
     //1 entrar na lista procurando um elemento com id igual o que ta na função
@@ -64,9 +77,6 @@ function excluirContato(id) {
 
 }
 
-function limparInput(){
-
-}
 
 function adicionarContatos() {
     const nameValue = document.getElementById("nome").value;
