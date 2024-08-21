@@ -17,7 +17,7 @@ let contatosObj= [
     {
         id: 1, 
         nome: "Caio",
-        email: "caiodasilva@hotmail.com",
+        email: "caiodasilva@hotmail.com",                   //
         tel: "48999199532"
         
     }
@@ -62,7 +62,7 @@ function excluirContato(id) {
     })
     console.log(typeof id,typeof contatosRegistrados[0].id)  
 
-    const objetoString = JSON.stringify(contatosAtualizados)
+    const objetoString = JSON.stringify(contatosAtualizados) // transformar em string antes de colocar no localstorage
     localStorage.setItem("contatosObj",objetoString)
 
     const elementoHTML = document.getElementById(id);
@@ -84,7 +84,7 @@ function adicionarContatos() {
     const telValue = document.getElementById("tel").value;
     
     const contatos = document.getElementById("contatos_011");
-    let ultimoId = parseInt(contatos.lastElementChild?.id) || 0
+    let ultimoId = parseInt(contatos.lastElementChild?.id) || 0 
     const somaId = ultimoId + 1;
 
     const novoContato = {
