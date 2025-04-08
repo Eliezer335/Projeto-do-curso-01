@@ -3,7 +3,6 @@ body {
     background-color: rgb(190, 190, 190);
     position: relative;
     height: 100vh;
-
 }
 
 .pagina_contatos {
@@ -21,7 +20,6 @@ body {
     align-items: center;
     position: fixed;
     background-color: rgba(58, 55, 55, 0.6)
-
 }
 
 .pai {
@@ -31,10 +29,7 @@ body {
     border-bottom: 1px solid black;
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between;  */
     align-items: center;
-
-
 }
 
 .filho {
@@ -61,8 +56,6 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-     
-
 }
 
 .dados_cadastrados {
@@ -74,7 +67,6 @@ body {
     font-size: 1rem;
     font-weight: 600;
     line-height: 0.5;
-
 }
 
 .botoes {
@@ -113,8 +105,6 @@ body {
     display: flex;
     flex-direction: column;
     line-height: 0;
-
-
 }
 
 .estilo {

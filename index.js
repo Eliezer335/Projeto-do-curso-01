@@ -1,10 +1,7 @@
-
 let id_edicao = "";
 let txt01_edicao = "";
 let txt02_edicao = "";
 let txt03_edicao = "";
-
-// let lista_de_nomes = "";
 
 let contatosObj= [
     {
@@ -17,7 +14,7 @@ let contatosObj= [
     {
         id: 1, 
         nome: "Caio",
-        email: "caiodasilva@hotmail.com",                   //
+        email: "caiodasilva@hotmail.com",                   
         tel: "48999199532"
         
     }
@@ -30,8 +27,8 @@ function abrirAba(nome,id,txt01,txt02,txt03){
     elementoParaAbertura.style.display="flex";
 
     const txt1 = document.getElementById(txt01 || "txt01")?.textContent  
-    const txt2 = document.getElementById(txt02 || "txt02")?.textContent   // text content pega o texto de dentro da tag HTML de texto, 
-    const txt3 = document.getElementById(txt03 || "txt03")?.textContent  //  EX: <p> Rendimento </p> pega palavra rendimento 
+    const txt2 = document.getElementById(txt02 || "txt02")?.textContent   
+    const txt3 = document.getElementById(txt03 || "txt03")?.textContent 
 
     const elementoInputNome = document.getElementById("nomeDeEdicao")
     const elementoInputEmail = document.getElementById("emailDeEdicao")
@@ -53,36 +50,21 @@ function fecharAba(nome){
 }
 
 function excluirContato(id) {
-    
     const contatosRegistrados = JSON.parse(localStorage.getItem("contatosObj"))
-    console.log("registrados",contatosRegistrados)
     const contatosAtualizados = contatosRegistrados.filter((contato) => {
         return(id != contato.id)
-            
     })
-    console.log(typeof id,typeof contatosRegistrados[0].id)  
 
-    const objetoString = JSON.stringify(contatosAtualizados) // transformar em string antes de colocar no localstorage
+    const objetoString = JSON.stringify(contatosAtualizados) 
     localStorage.setItem("contatosObj",objetoString)
-
     const elementoHTML = document.getElementById(id);
     elementoHTML.remove()
-    
-
-    //excluir o elemento tambem do localstorage 
-    //1 entrar na lista procurando um elemento com id igual o que ta na função
-    //se for igual exclui se nao 
-    //procurar a posição do elemento 
-    // usar o metodo filter
-
 }
-
 
 function adicionarContatos() {
     const nameValue = document.getElementById("nome").value;
     const emailValue = document.getElementById("email").value;
-    const telValue = document.getElementById("tel").value;
-    
+    const telValue = document.getElementById("tel").value; 
     const contatos = document.getElementById("contatos_011");
     let ultimoId = parseInt(contatos.lastElementChild?.id) || 0 
     const somaId = ultimoId + 1;
@@ -98,18 +80,15 @@ function adicionarContatos() {
         contatosObj= contatosRegistrados;
     }
     contatosObj.push(novoContato);
-    console.log(contatosObj);
     const objetoString = JSON.stringify(contatosObj)
     localStorage.setItem("contatosObj",objetoString)
-
 
         contatos.innerHTML += `
         <div class="contato" id="${somaId}">
         <div class="dados_cadastrados">
             <p id="txt${somaId}1">nome: ${nameValue}</p>
             <p id="txt${somaId}2">email: ${emailValue}</p>
-            <p id="txt${somaId}3">tel.: ${telValue}</p>
-                 
+            <p id="txt${somaId}3">tel.: ${telValue}</p>            
         </div>
         <div class="botoes">
             <div class="icone" onclick="abrirAba('.pagina_de_edicao',${somaId},'txt${somaId}1','txt${somaId}2','txt${somaId}3')">
@@ -129,9 +108,7 @@ function adicionarContatos() {
             </div>
         </div>  
         </div>
-        
-        `;
-        
+        `;   
 }
 
 function adicionarDoLocalStorage(){
@@ -139,16 +116,13 @@ function adicionarDoLocalStorage(){
 
     if(contatosRegistrados){
        const contatos = document.getElementById("contatos_011");
-
        for (const contato of contatosRegistrados) {
-    
             contatos.innerHTML += `
             <div class="contato" id="${contato.id}">
             <div class="dados_cadastrados">
                 <p id="txt${contato.id}1">nome: ${contato.nome}</p>
                 <p id="txt${contato.id}2">email: ${contato.email}</p>
-                <p id="txt${contato.id}3">tel.: ${contato.tel}</p>
-                     
+                <p id="txt${contato.id}3">tel.: ${contato.tel}</p>                    
             </div>
             <div class="botoes">
                 <div class="icone" onclick="abrirAba('.pagina_de_edicao',${contato.id},'txt${contato.id}1','txt${contato.id}2','txt${contato.id}3')">
@@ -167,33 +141,25 @@ function adicionarDoLocalStorage(){
                     </svg>
                 </div>
             </div>  
-            </div>
-            
-            `;
-        
+            </div>`;
        }
     }
-
-
 }
 
 function EditarContato(){
     
     const contato = document.getElementById(id_edicao)
-
     const elementoEditaNome = document.getElementById("nomeDeEdicao").value
     const elementoEditaEmail = document.getElementById("emailDeEdicao").value
     const elementoEditaTel = document.getElementById("telDeEdicao").value
 
     contato.innerHTML = `
-        
         <div class="dados_cadastrados">
             <p id=${txt01_edicao}>Nome:${elementoEditaNome}</p>
             <p id=${txt02_edicao}>email:${elementoEditaEmail}</p>
             <p id=${txt03_edicao}>tel.:${elementoEditaTel}</p>               
         </div>
         <div class="botoes">
-
         <div class="icone" onclick="abrirAba('.pagina_de_edicao','${id_edicao}','${txt01_edicao}','${txt02_edicao}','${txt03_edicao}')">
             <svg fill="#676767" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -203,14 +169,12 @@ function EditarContato(){
                     d="M888.3 321.2l-80.8 80.9L618.8 213.4l80.9-80.8c29.8-29.8 78-29.8 107.8 0l80.9 80.8C918.1 243.1 918.1 291.4 888.3 321.2z" />
             </svg>
         </div>
-
         <div class="icone" onclick="excluirContato('${id_edicao}')">
             <svg fill="#676767" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z" />
             </svg>
-        </div>
-          
+        </div>          
         `;
 }
 
@@ -220,8 +184,6 @@ function pesquisarContatos() {
 
     for(const dados of dados_cadastrados){
         const nome = dados.querySelector("p")?.textContent
-        console.log(nome)    
-
             if(nome.includes(input)){
                 dados.style.display='flex';
             }else{
