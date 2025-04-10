@@ -47,7 +47,7 @@ body {
 }
 
 .contato {
-    width: 98.5%;
+    width: 99.5%;
     height: 115px;
     background-color: white;
     margin: 25px 10px 10px 10px;
@@ -62,7 +62,7 @@ body {
     width: 100%;
     height: auto; 
     color: #000;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     border-radius: 5px;
     font-size: 1rem;
     font-weight: 600;
@@ -83,6 +83,7 @@ body {
     margin-right: 10px;
     display: flex;
 }
+
 .pesquisa {
     width: 500px;
     height: 4vh;
@@ -143,4 +144,52 @@ p {
     width: 50%;
     margin-top: 25px;
     margin-bottom: 25px;
+}
+
+.dados_Usuario{
+    width: 100%;
+}
+
+.icone_contato{
+    width: 20px;
+    margin: 0 5px 0 5px;
+}
+
+@media screen and (max-width: 450px) {
+    
+    .botoes{
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .icone_contato{
+        width: 15px;
+        margin-bottom: 3px;
+    }
+
+    .dados_Usuario{
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 945px) {
+    .icone_ADD_contato{
+        margin-left: 15px;
+    }
+   
+}
+
+@media screen and (max-width: 330px) {
+    
+    .icone_contato{
+        width: 13px;
+        margin-bottom: 3px;
+    }
+
+    .dados_Usuario{
+        font-size: 10px;
+    }
+    
 }
