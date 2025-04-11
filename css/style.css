@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: rgb(190, 190, 190);
+    background-color: #d3eafa;
     position: relative;
     height: 100vh;
 }
@@ -44,12 +44,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .contato {
     width: 99.5%;
     height: 115px;
-    background-color: white;
+    background-color: #ffff;
     margin: 25px 10px 10px 10px;
     border-radius: 5px;
     padding: 0 10px 0 10px;
@@ -88,7 +90,7 @@ body {
     width: 500px;
     height: 4vh;
     color: #000;
-    background-color: rgb(190, 190, 190);
+    background-color: rgb(229, 240, 248);
     display: flex;
     margin-bottom: 12px;
     border-radius: 5px;
@@ -152,7 +154,9 @@ p {
 
 .icone_contato{
     width: 20px;
+    height: 20px;
     margin: 0 5px 0 5px;
+    
 }
 
 @media screen and (max-width: 450px) {
