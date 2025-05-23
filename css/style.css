@@ -59,6 +59,8 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
+    border: rgba(0, 0, 0, 0.364) solid 1px;
+    box-shadow: 0 0 20px 5px black;
 }
 
 .dados_cadastrados {
