@@ -61,7 +61,7 @@ function excluirContato(id) {
     elementoHTML.remove()
 }
 
-function adicionarContatos() {
+function adicionarContatos(nome) {
     const nameValue = document.getElementById("nome").value;
     const emailValue = document.getElementById("email").value;
     const telValue = document.getElementById("tel").value; 
@@ -99,7 +99,9 @@ function adicionarContatos() {
             </div>
         </div>  
         </div>
-        `;   
+        `; 
+    const elemento = document.querySelector(nome)
+    elemento.style.display="none";      
 }
 
 function adicionarDoLocalStorage(){
@@ -130,13 +132,13 @@ function adicionarDoLocalStorage(){
     }
 }
 
-function EditarContato(){
+function EditarContato(nome){
     
     const contato = document.getElementById(id_edicao)
     const elementoEditaNome = document.getElementById("nomeDeEdicao").value
     const elementoEditaEmail = document.getElementById("emailDeEdicao").value
     const elementoEditaTel = document.getElementById("telDeEdicao").value
-
+    
     contato.innerHTML = `
         <div class="dados_cadastrados">
             <p class="dados_Usuario" id=${txt01_edicao}>Nome:${elementoEditaNome}</p>
@@ -151,6 +153,9 @@ function EditarContato(){
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#74C0FC" d="M576 128c0-35.3-28.7-64-64-64L205.3 64c-17 0-33.3 6.7-45.3 18.7L9.4 233.4c-6 6-9.4 14.1-9.4 22.6s3.4 16.6 9.4 22.6L160 429.3c12 12 28.3 18.7 45.3 18.7L512 448c35.3 0 64-28.7 64-64l0-256zM271 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg>
         </div>          
         `;
+    
+    const elemento = document.querySelector(nome)
+    elemento.style.display="none";    
 }
 
 function pesquisarContatos() {
