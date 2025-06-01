@@ -101,6 +101,7 @@ body {
 .icone_ADD_contato {
     display: flex;
     margin-left: 650px;
+    
 }
 
 .cadastro {
@@ -164,41 +165,55 @@ p {
     
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 490px) {  
+    .botoes{
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .icone_contato{
+        width: 15px;
+        margin-bottom: 3px;
+    }
+  }
+
+@media screen and (max-width: 945px) {
+    .icone_ADD_contato{
+        margin-left: 15px;
+    }
+    .dados_Usuario{
+        font-size: 11px;
+    }
+}
+@media screen and (min-width: 1270px) {
+    .icone_ADD_contato{
+        position: absolute; 
+        right: 0;
+    }
+}
+@media screen and (max-width: 390px) {
     
     .botoes{
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
     }
-
     .icone_contato{
-        width: 15px;
+        width: 11px;
         margin-bottom: 3px;
     }
-
     .dados_Usuario{
-        font-size: 12px;
+        font-size: 10px;
     }
-
-}
-
-@media screen and (max-width: 945px) {
-    .icone_ADD_contato{
-        margin-left: 15px;
-    }
-   
 }
 
 @media screen and (max-width: 330px) {
     
     .icone_contato{
-        width: 13px;
-        margin-bottom: 3px;
+        width: 10px;
+        margin-bottom: 2px;
     }
-
     .dados_Usuario{
-        font-size: 10px;
+        font-size: 9px;
     }
-    
 }
