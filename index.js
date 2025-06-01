@@ -62,9 +62,13 @@ function excluirContato(id) {
 }
 
 function adicionarContatos(nome) {
-    const nameValue = document.getElementById("nome").value;
-    const emailValue = document.getElementById("email").value;
-    const telValue = document.getElementById("tel").value; 
+    const nameInput = document.getElementById("nome");
+    const emailInput = document.getElementById("email");
+    const telInput = document.getElementById("tel");
+    const nameValue = nameInput.value;
+    const emailValue = emailInput.value;
+    const telValue = telInput.value;
+
     const contatos = document.getElementById("contatos_011");
     let ultimoId = parseInt(contatos.lastElementChild?.id) || 0 
     const somaId = ultimoId + 1;
@@ -99,7 +103,11 @@ function adicionarContatos(nome) {
             </div>
         </div>  
         </div>
-        `; 
+        `;
+
+    nameInput.value = "";
+    emailInput.value = "";
+    telInput.value = "";
     const elemento = document.querySelector(nome)
     elemento.style.display="none";      
 }
@@ -141,9 +149,9 @@ function EditarContato(nome){
     
     contato.innerHTML = `
         <div class="dados_cadastrados">
-            <p class="dados_Usuario" id=${txt01_edicao}>Nome:${elementoEditaNome}</p>
-            <p class="dados_Usuario" id=${txt02_edicao}>email:${elementoEditaEmail}</p>
-            <p class="dados_Usuario" id=${txt03_edicao}>tel.:${elementoEditaTel}</p>               
+            <p class="dados_Usuario" id=${txt01_edicao}>Nome: ${elementoEditaNome}</p>
+            <p class="dados_Usuario" id=${txt02_edicao}>email: ${elementoEditaEmail}</p>
+            <p class="dados_Usuario" id=${txt03_edicao}>tel.: ${elementoEditaTel}</p>               
         </div>
         <div class="botoes">
         <div class="icone_contato" onclick="abrirAba('.pagina_de_edicao','${id_edicao}','${txt01_edicao}','${txt02_edicao}','${txt03_edicao}')">
