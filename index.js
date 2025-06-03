@@ -26,9 +26,9 @@ function abrirAba(nome,id,txt01,txt02,txt03){
     const elementoParaAbertura =  document.querySelector(nome)
     elementoParaAbertura.style.display="flex";
 
-    const txt1 = document.getElementById(txt01 || "txt01")?.textContent  
-    const txt2 = document.getElementById(txt02 || "txt02")?.textContent   
-    const txt3 = document.getElementById(txt03 || "txt03")?.textContent 
+    const txt1 = document.getElementById(txt01 || "txt01")?.textContent.replace("Nome: ", "")  
+    const txt2 = document.getElementById(txt02 || "txt02")?.textContent.replace("Email: ", "")    
+    const txt3 = document.getElementById(txt03 || "txt03")?.textContent.replace("Tel.: ", "") 
 
     const elementoInputNome = document.getElementById("nomeDeEdicao")
     const elementoInputEmail = document.getElementById("emailDeEdicao")
