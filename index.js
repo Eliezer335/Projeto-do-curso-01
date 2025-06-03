@@ -150,8 +150,8 @@ function EditarContato(nome){
     contato.innerHTML = `
         <div class="dados_cadastrados">
             <p class="dados_Usuario" id=${txt01_edicao}>Nome: ${elementoEditaNome}</p>
-            <p class="dados_Usuario" id=${txt02_edicao}>email: ${elementoEditaEmail}</p>
-            <p class="dados_Usuario" id=${txt03_edicao}>tel.: ${elementoEditaTel}</p>               
+            <p class="dados_Usuario" id=${txt02_edicao}>Email: ${elementoEditaEmail}</p>
+            <p class="dados_Usuario" id=${txt03_edicao}>Tel.: ${elementoEditaTel}</p>               
         </div>
         <div class="botoes">
         <div class="icone_contato" onclick="abrirAba('.pagina_de_edicao','${id_edicao}','${txt01_edicao}','${txt02_edicao}','${txt03_edicao}')">
