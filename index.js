@@ -69,6 +69,11 @@ function adicionarContatos(nome) {
     const emailValue = emailInput.value;
     const telValue = telInput.value;
 
+    if (!nameValue || !emailValue || !telValue) {
+        alert("Por favor, preencha todos os campos antes de adicionar o contato.");
+        return;
+    }
+
     const contatos = document.getElementById("contatos_011");
     let ultimoId = parseInt(contatos.lastElementChild?.id) || 0 
     const somaId = ultimoId + 1;
@@ -146,6 +151,11 @@ function EditarContato(nome){
     const elementoEditaNome = document.getElementById("nomeDeEdicao").value
     const elementoEditaEmail = document.getElementById("emailDeEdicao").value
     const elementoEditaTel = document.getElementById("telDeEdicao").value
+
+    if (!elementoEditaNome || !elementoEditaEmail || !elementoEditaTel) {
+        alert("Por favor, preencha todos os campos antes de salvar a edição.");
+        return;
+    }
     
     contato.innerHTML = `
         <div class="dados_cadastrados">
