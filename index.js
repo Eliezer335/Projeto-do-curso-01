@@ -9,18 +9,14 @@ let contatosObj= [
         nome: "Eliezer",
         email: "eliezerdasilva@hotmail.com",
         tel: "48999105522"
-
     },
     {
         id: 1, 
         nome: "Caio",
         email: "caiodasilva@hotmail.com",                   
-        tel: "48999199532"
-        
+        tel: "48999199532"        
     }
 ];
-
-
 
 function abrirAba(nome,id,txt01,txt02,txt03){
     const elementoParaAbertura =  document.querySelector(nome)
